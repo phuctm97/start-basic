@@ -3,7 +3,7 @@ import axios from 'redaxios'
 import { DEPLOY_URL } from '../utils/users'
 import type { User } from '../utils/users'
 
-export const Route = createFileRoute('/users')({
+export const Route = createFileRoute('/_app/users')({
   loader: async () => {
     return await axios
       .get<Array<User>>(DEPLOY_URL + '/api/users')
